@@ -2,11 +2,6 @@
 
 #Iniciando estudo em microserviços com java pelo curso do Nélio alves com padrão mvc.
 
-Versões usadas tecnologias:
-Java 11 
-Spring boot 2.3.4
-
-
 | Tecnologias | Versão                                                              |
 |-------------|-----------------------------------------------------------------------------|
 | Java        | 11        |
