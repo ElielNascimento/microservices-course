@@ -1,6 +1,6 @@
 # Microsserviços Java com Spring Boot e Spring Cloud
 
-#Iniciando estudo em microserviços com java pelo curso do Nélio alves com padrão mvc.
+#Iniciando estudo em microserviços com java, pelo curso do Nélio alves com padrão mvc.
 
 | Tecnologias | Versão                                                              |
 |-------------|-----------------------------------------------------------------------------|
