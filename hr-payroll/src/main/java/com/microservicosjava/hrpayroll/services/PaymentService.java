@@ -1,4 +1,4 @@
-package com.microservicosjava.hrpayroll.service;
+package com.microservicosjava.hrpayroll.services;
 
 import java.io.Serializable;
 

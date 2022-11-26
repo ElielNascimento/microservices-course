@@ -1,4 +1,4 @@
-package com.microservicosjava.hrpayroll.resource;
+package com.microservicosjava.hrpayroll.resources;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.microservicosjava.hrpayroll.entities.Payment;
-import com.microservicosjava.hrpayroll.service.PaymentService;
+import com.microservicosjava.hrpayroll.services.PaymentService;
 
 @RestController
 @RequestMapping(value = "/api/payment")
