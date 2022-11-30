@@ -11,7 +11,7 @@ import com.microservicosjava.hrpayroll.entities.Payment;
 import com.microservicosjava.hrpayroll.services.PaymentService;
 
 @RestController
-@RequestMapping(value = "/api/payment")
+@RequestMapping(value = "/payments")
 public class PaymentController {
 
 	@Autowired
