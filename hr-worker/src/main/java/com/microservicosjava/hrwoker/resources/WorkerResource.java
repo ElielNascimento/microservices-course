@@ -35,6 +35,17 @@ public class WorkerResource {
 
 	@GetMapping("/{id}")
 	private ResponseEntity<Worker> workerById(@PathVariable Long id) {
+
+		/*
+		 * int x = 1; if(x == 1) throw new RuntimeException("test");
+		 */
+
+		/*
+		 * try { Thread.sleep(3000L); } catch (InterruptedException e) { // TODO
+		 * Auto-generated cath block e.printStackTrace(); }
+		 * 
+		 */
+
 		logger.info("PORT =" + env.getProperty("local.server.port"));
 
 		Worker response = workerService.workedById(id);

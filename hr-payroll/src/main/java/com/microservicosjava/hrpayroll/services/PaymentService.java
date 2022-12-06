@@ -21,7 +21,6 @@ public class PaymentService implements Serializable {
 	private WorkerFeignClient workerFeignClient;
 
 	public Payment PaymentCont(long workerId, int days) {
-
 		Worker worker = workerFeignClient.workerById(workerId).getBody();
 		return new Payment(worker.getName(), worker.getDailyIncome(), days);
 	}
