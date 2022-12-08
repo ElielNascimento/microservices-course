@@ -2,6 +2,7 @@ package com.microservicosjava.hrpayroll.resources;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import com.microservicosjava.hrpayroll.entities.Payment;
 import com.microservicosjava.hrpayroll.services.PaymentService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping(value = "/payments")
 public class PaymentController {
