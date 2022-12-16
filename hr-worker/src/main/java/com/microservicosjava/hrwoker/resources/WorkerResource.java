@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.microservicosjava.hrwoker.entities.Worker;
 import com.microservicosjava.hrwoker.services.WorkerService;
+import com.netflix.discovery.converters.Auto;
 
 @CrossOrigin("*")
 @RestController
@@ -42,11 +43,11 @@ public class WorkerResource {
 		 * int x = 1; if(x == 1) throw new RuntimeException("test");
 		 */
 
-		/*
-		 * try { Thread.sleep(3000L); } catch (InterruptedException e) { // TODO
-		 * Auto-generated cath block e.printStackTrace(); }
-		 * 
-		 */
+		try {
+			Thread.sleep(3000L);
+		} catch (InterruptedException e) { // TODO
+			e.printStackTrace();
+		}
 
 		logger.info("PORT =" + env.getProperty("local.server.port"));
 
