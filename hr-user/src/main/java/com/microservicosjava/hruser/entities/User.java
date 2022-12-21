@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +14,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Table(name = "tb_user")
 @Entity
@@ -21,8 +23,9 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
 	private String name;
+
+	@Column(unique = true)
 	private String email;
 	private String password;
 
@@ -30,7 +33,7 @@ public class User {
 	@JoinTable(name = "tb_user_role", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "role_id") })
 
-	 Set<Role> roles = new HashSet<>();
+	Set<Role> roles = new HashSet<>();
 
 	public User() {
 	}
@@ -68,6 +71,10 @@ public class User {
 
 	public Long getId() {
 		return id;
+	}
+
+	public Set<Role> getRoles() {
+		return roles;
 	}
 
 	@Override
