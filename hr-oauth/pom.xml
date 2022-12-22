@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.microservicosjava</groupId>
-	<artifactId>hr-ouath</artifactId>
+	<artifactId>hr-oauth</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>hr-ouath</name>
 	<description>Authorization Server</description>
