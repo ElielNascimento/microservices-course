@@ -12,7 +12,7 @@ import com.microservicosjava.hrouath.entities.User;
 @FeignClient(name = "hr-user", path = "/users")
 public interface UserFeignClient {
 	
-	@GetMapping("/search")
+	@GetMapping(value = "/search")
 	 ResponseEntity<User> findByEmail(@RequestParam String email);
 
 }
