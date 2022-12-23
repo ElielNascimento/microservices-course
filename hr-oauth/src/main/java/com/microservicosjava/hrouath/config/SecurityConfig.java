@@ -21,18 +21,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailsService userDetailsService;
 
-	
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-	    http.authorizeRequests().antMatchers(HttpMethod.GET, "/users/search/**").permitAll();
-	}
-	
 	@Override
 	@Autowired
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth
-		   .userDetailsService(userDetailsService)
-		   .passwordEncoder(passwordEncoder);
+		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
 	}
 
 	@Override
