@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.microservicosjava.hrwoker.entities.Worker;
 import com.microservicosjava.hrwoker.repositories.WorkerRepository;
 
-
 @RefreshScope
 @RestController
 @RequestMapping(value = "/workers")
@@ -48,13 +47,10 @@ public class WorkerResource {
 
 	@GetMapping(value = "/{id}")
 	private ResponseEntity<Worker> workerById(@PathVariable Long id) {
-
-		try {
-			Thread.sleep(3000L);
-		} catch (InterruptedException e) { // TODO
-			e.printStackTrace();
-		}
-
+		/*
+		 * try { Thread.sleep(3000L); } catch (InterruptedException e) { // TODO
+		 * e.printStackTrace(); }
+		 */
 		logger.info("PORT =" + env.getProperty("local.server.port"));
 
 		Worker response = workerService.findById(id).get();
