@@ -12,7 +12,7 @@ import com.microservicosjava.hrpayroll.entities.Payment;
 import com.microservicosjava.hrpayroll.services.PaymentService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
-@CrossOrigin("*")
+
 @RestController
 @RequestMapping(value = "/payments")
 public class PaymentController {
