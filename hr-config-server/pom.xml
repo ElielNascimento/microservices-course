@@ -33,7 +33,6 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
-
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
