@@ -16,7 +16,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-@Table(name = "tb_user")
+@Table(name ="tb_user")
 @Entity
 public class User {
 
