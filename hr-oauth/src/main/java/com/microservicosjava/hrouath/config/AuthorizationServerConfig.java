@@ -13,21 +13,15 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
-
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter  {
 
-	
 	@Value("${oauth.client.name}")
 	private String clientName;
-	
-	
+		
 	@Value("${oauth.client.secret}")
 	private String clientPass;
-	
-	
-	
 	
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -57,7 +51,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 		   .secret(bCryptPasswordEncoder.encode(clientPass))
 		   .scopes("read", "white")
 		   .authorizedGrantTypes("password")
-		   .accessTokenValiditySeconds(86400);
+		   .accessTokenValiditySeconds(86);
 	}
 
 	@Override

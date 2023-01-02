@@ -5,7 +5,6 @@ import java.io.Serializable;
 public class Payment implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private Long id;
 	private String name;
 	private Double dailyIncome;
 	private Integer days;
@@ -17,10 +16,6 @@ public class Payment implements Serializable {
 		this.name = name;
 		this.dailyIncome = dailyIncome;
 		this.days = days;
-	}
-
-	public Long getId() {
-		return id;
 	}
 
 	public String getName() {
